@@ -1,12 +1,11 @@
 {
-  "name": "jetstreamafrica/jet-sinay",
+  "name": "nicholaschun/payment-sdk-php",
   "description": "Package with services for handling all payment requests",
   "type": "library",
   "license": "MIT",
   "authors": [
     {
-      "name": "Nicholas Mamiya",
-      "email": "nkm@jetstreamafrica.com"
+      "name": "Nicholas Mamiya"
     }
   ],
   "require": {
@@ -19,12 +18,12 @@
   },
   "autoload": {
     "psr-4": {
-      "JetstreamAfrica\\JetPayment\\": "src/"
+      "nicholaschun\\payment-sdk-php\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "JetstreamAfrica\\JetPayment\\Tests\\": "tests/"
+      "nicholaschun\\payment-sdk-php\\Tests\\": "tests/"
     }
   },
   "scripts": {
@@ -33,7 +32,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "JetstreamAfrica\\JetPayment\\JetPaymentServiceProvider"
+        "nicholaschun\\payment-sdk-php\\PaymentSDKServiceProvider"
       ]
     }
   }
