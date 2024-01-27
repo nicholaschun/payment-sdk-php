@@ -1,0 +1,49 @@
+{
+  "status": true,
+  "message": "Verification successful",
+  "data": {
+    "id": 2009945086,
+    "domain": "test",
+    "status": "success",
+    "reference": "rd0bz6z2wu",
+    "amount": 20000,
+    "message": null,
+    "gateway_response": "Successful",
+    "paid_at": "2022-08-09T14:21:32.000Z",
+    "created_at": "2022-08-09T14:20:57.000Z",
+    "channel": "card",
+    "currency": "NGN",
+    "ip_address": "100.64.11.35",
+    "metadata": "",
+    "fees": 100,
+    "fees_split": null,
+    "customer": {
+      "id": 89929267,
+      "first_name": null,
+      "last_name": null,
+      "email": "hello@email.com",
+      "customer_code": "CUS_i5yosncbl8h2kvc",
+      "phone": null,
+      "metadata": null,
+      "risk_action": "default",
+      "international_format_phone": null
+    },
+    "subaccount": {
+      "id" : 1030270,
+      "subaccount_code" : "ACCT_6v323r07p3qm9yf",
+      "business_name" : "Test Freight",
+      "description" : "Test Freight",
+      "primary_contact_name" : "Test Account",
+      "primary_contact_email" : "test@gmail.com",
+      "primary_contact_phone" : "+233543343891",
+      "metadata" : "stringify payload",
+      "percentage_charge" : 10,
+      "settlement_bank" : "Stanbic Bank Ghana Limited",
+      "bank_id" : 52,
+      "account_number" : "7000008381000",
+      "currency" : "GHS",
+      "active" : true
+    }
+  }
+}
+
