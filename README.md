@@ -1,16 +1,16 @@
-# <div align="center">Jet Payment</div>
+# <div align="center">Payment SDK PHP</div>
 <div align="center">
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![GitHub Issues](https://img.shields.io/github/issues/JetstreamAfrica/The-Documentation-Compendium.svg)](https://github.com/JetstreamAfrica/raven/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/JetstreamAfrica/The-Documentation-Compendium.svg)](https://github.com/JetstreamAfrica/raven/pulls)
+[![GitHub Issues](https://img.shields.io/github/issues/nicholaschun/The-Documentation-Compendium.svg)](https://github.com/nicholaschun/payment-sdk-php/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/nicholaschun/The-Documentation-Compendium.svg)](https://github.com/nicholaschun/payment-sdk-php/pulls)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
 </div>
 
 ---
 
-<p align="center"> Jetstream Africa's Payment Integration SDK package
+<p align="center"> Paystack Payment Integration SDK package for laravel applications
     <br> 
 </p>
 
@@ -24,7 +24,7 @@
 - [Authors](#authors)
 
 ## 🧐 About <a name = "about"></a>
-Jet Payment is a Laravel SDK package with services for easily interacting with the Paystack and Strip Payment Apis.
+This Payment is a Laravel SDK package with services for easily interacting with the Paystack and Strip Payment Apis.
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
@@ -41,7 +41,7 @@ To set up the project:
 
 - Clone the repository using the command:
     ```bash
-    git clone https://github.com/JetstreamAfrica/jet-payment.git
+    git clone https://github.com/nicholaschun/payment-sdk-php.git
     ```
 
 - Install dependencies using the command:
@@ -53,18 +53,18 @@ To set up the project:
     ```bash
     composer test
     ```
-- Provide correct secret keys for accounts for each country in jet-pay config
+- Provide correct secret keys for accounts for each country in pay-config config
 ```
 'paystack' => [
     'ghana' => [
       'base_url' => env('PAYSTACK_BASE_URL', 'https://api.paystack.co'),
       'secret_key' => env('PAYSTACK_SECRET_KEY_GH', 'sk_test_xxxxxxxx'),
-      'jetstream_charge' => env('JET_PAYSTACK_CHARGE_GH', 0.00)
+      'charge' => env('PAYSTACK_CHARGE_GH', 0.00)
     ],
     'nigeria' => [
       'base_url' => env('PAYSTACK_BASE_URL', 'https://api.paystack.co'),
       'secret_key' => env('PAYSTACK_SECRET_KEY_NG', 'sk_test_xxxxxxxx'),
-      'jetstream_charge' => env('JET_PAYSTACK_CHARGE_NG', 0.00)
+      'charge' => env('PAYSTACK_CHARGE_NG', 0.00)
 
     ],
   ]
@@ -84,9 +84,9 @@ Read more about subaccounts here https://paystack.com/docs/api/subaccount/
 
 ###### Creating a Sub Account Sample Usage
 ```php
-   use JetstreamAfrica\JetPayment\Services\Paystack\Interface\PaystackSubAccountService;
-   use JetstreamAfrica\JetPayment\Services\Paystack\Data\CreateSubAccountRequest;
-   use JetstreamAfrica\JetPayment\Services\Paystack\Data\OptionArgs;
+   use Nicholaschun\PaymentSDK\Services\Paystack\Interface\PaystackSubAccountService;
+   use Nicholaschun\PaymentSDK\Services\Paystack\Data\CreateSubAccountRequest;
+   use Nicholaschun\PaymentSDK\Services\Paystack\Data\OptionArgs;
 
    class SampleClass
    {
@@ -144,9 +144,9 @@ Read more about transactions here https://paystack.com/docs/api/transaction/#ini
 
 ###### Initiating a transaction Sample Usage
 ```php
-   use JetstreamAfrica\JetPayment\Services\Paystack\Interface\PaystackTransactionService;
-   use JetstreamAfrica\JetPayment\Services\Paystack\Data\InitiateTransactionRequest;
-   use JetstreamAfrica\JetPayment\Services\Paystack\Data\OptionArgs;
+   use Nicholaschun\PaymentSDK\Services\Paystack\Interface\PaystackTransactionService;
+   use Nicholaschun\PaymentSDK\Services\Paystack\Data\InitiateTransactionRequest;
+   use Nicholaschun\PaymentSDK\Services\Paystack\Data\OptionArgs;
 
    class SampleClass
    {
@@ -184,9 +184,9 @@ Read more about transaction verifcation here https://paystack.com/docs/api/trans
 
 ###### Verifying a transaction Sample Usage
 ```php
-   use JetstreamAfrica\JetPayment\Services\Paystack\Interface\PaystackTransactionService;
+   use Nicholaschun\PaymentSDK\Services\Paystack\Interface\PaystackTransactionService;
 
-   use JetstreamAfrica\JetPayment\Services\Paystack\Data\OptionArgs;
+   use Nicholaschun\PaymentSDK\Services\Paystack\Data\OptionArgs;
 
    class SampleClass
    {
@@ -259,9 +259,9 @@ Read more about fetching a transaction here https://paystack.com/docs/api/transa
 
 ###### Get a transaction Sample Usage
 ```php
-   use JetstreamAfrica\JetPayment\Services\Paystack\Interface\PaystackTransactionService;
+   use Nicholaschun\PaymentSDK\Services\Paystack\Interface\PaystackTransactionService;
    use 
-   use JetstreamAfrica\JetPayment\Services\Paystack\Data\OptionArgs;
+   use Nicholaschun\PaymentSDK\Services\Paystack\Data\OptionArgs;
 
    class SampleClass
    {
@@ -337,10 +337,10 @@ Read more about fetching a transaction here https://paystack.com/docs/api/transa
 
 ###### Get Bank List  Sample Usage
 ```php
-   use JetstreamAfrica\JetPayment\Services\Paystack\Interface\PaystackBankService;
-   use JetstreamAfrica\JetPayment\Services\Paystack\Data\ListBankAccountRequest;
+   use Nicholaschun\PaymentSDK\Services\Paystack\Interface\PaystackBankService;
+   use Nicholaschun\PaymentSDK\Services\Paystack\Data\ListBankAccountRequest;
 
-   use JetstreamAfrica\JetPayment\Services\Paystack\Data\OptionArgs;
+   use Nicholaschun\PaymentSDK\Services\Paystack\Data\OptionArgs;
 
    class SampleClass
    {
@@ -397,7 +397,7 @@ This package is not available on Packagist. Hence, to use this package in your l
     ```json
     {
       "require": {
-        "jetstreamafrica/jet-payment": "1.0.0"
+        "nicholaschun/payment-sdk-php": "1.0.0"
       }
     }
     ```
@@ -406,8 +406,8 @@ This package is not available on Packagist. Hence, to use this package in your l
       "repositories": [
         {
           "type": "vcs",
-          "name": "jetstreamafrica/jet-payment",
-          "url": "https://github.com/JetstreamAfrica/jet-payment.git",
+          "name": "nicholaschun/payment-sdk-php",
+          "url": "https://github.com/nicholaschun/payment-sdk-php.git",
           "branch": "main"
         }
       ]
@@ -441,18 +441,18 @@ This package is not available on Packagist. Hence, to use this package in your l
 5. After successfully adding this package to your project, you will need to publish the config file where you can
    set up your credentials for Sinay APIs access. The following command will allow you do that:
     ```bash
-    php artisan jet-pay:install
+    php artisan payment-sdk:install
     ```
 
-6. The config file `jet-pay.php`, will be published to your config directory `./config`. Feel free to customize
+6. The config file `pay-config.php`, will be published to your config directory `./config`. Feel free to customize
    it to suit your needs.
 
 7. To interact with any of the Payment SDK Services, inject any of the available service interfaces into your target
    method as shown below:
    ```php
-   use JetstreamAfrica\JetPayment\Services\Paystack\Interface\PaystackTransactionService;
-   use JetstreamAfrica\JetPayment\Services\Paystack\Data\InitiateTransactionRequest;
-   use JetstreamAfrica\JetPayment\Services\Paystack\Data\OptionArgs;
+   use Nicholaschun\PaymentSDK\Services\Paystack\Interface\PaystackTransactionService;
+   use Nicholaschun\PaymentSDK\Services\Paystack\Data\InitiateTransactionRequest;
+   use Nicholaschun\PaymentSDK\Services\Paystack\Data\OptionArgs;
 
    class SampleClass
    {
